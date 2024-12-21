@@ -26,7 +26,7 @@ public class PlayerRay : MonoBehaviour
 
                         Vector3 forceDirection = hit.point - ray.origin;
 
-                        rigidbody.AddForce(forceDirection.normalized * _power, ForceMode.Impulse);
+                        rigidbody.AddForce(forceDirection.normalized * _power, ForceMode.Acceleration);
                     }
                 }
             }

@@ -11,7 +11,6 @@ public class Target : MonoBehaviour
     private void Awake()
     {
         _rigidbody = GetComponent<Rigidbody>();
-        _support = GetComponentInChildren<Support>();
     }
 
     private void OnEnable()
@@ -26,6 +25,7 @@ public class Target : MonoBehaviour
 
     public void ActivateKinematic()
     {
+        Debug.Log("«¿Ã≈–ÀŒ");
         _rigidbody.isKinematic = true;
     }
 

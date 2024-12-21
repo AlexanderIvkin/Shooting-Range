@@ -1,6 +1,5 @@
 using System;
 using UnityEngine;
-using UnityEngine.Events;
 
 public class Support : MonoBehaviour
 {
@@ -8,8 +7,10 @@ public class Support : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.collider.TryGetComponent<Stopper>(out _))
+        Debug.Log("Саппорт чего коснулся");
+        if (collision.collider.TryGetComponent<Stopper>(out _))
         {
+            Debug.Log("Коснулось Стоппера");
             StopperTouched?.Invoke();
         }
     }
