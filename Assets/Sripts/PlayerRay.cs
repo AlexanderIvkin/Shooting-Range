@@ -13,9 +13,9 @@ public class PlayerRay : MonoBehaviour
 
             if (Physics.Raycast(ray, out RaycastHit hit))
             {
-                if (hit.collider.CompareTag("Target"))
+                if (hit.collider.TryGetComponent<Target>(out Target target))
                 {
-                    Rigidbody rigidbody = hit.collider.GetComponent<Rigidbody>();
+                    Rigidbody rigidbody = target.gameObject.GetComponent<Rigidbody>();
 
                     if (rigidbody != null)
                     {
