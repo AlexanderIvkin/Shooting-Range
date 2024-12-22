@@ -25,7 +25,6 @@ public class Target : MonoBehaviour
 
     public void ActivateKinematic()
     {
-        Debug.Log("«¿Ã≈–ÀŒ");
         _rigidbody.isKinematic = true;
     }
 
